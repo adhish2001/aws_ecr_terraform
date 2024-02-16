@@ -1,0 +1,10 @@
+variable "ecr_repo_name" {
+    type        = string
+    description = "The name variable used for the ecr repository"
+}
+variable "aws_region" {
+    type        = string
+    description = "The AWS region"
+    default     = "us-east-2"
+  
+}
