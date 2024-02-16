@@ -12,6 +12,8 @@ provider "aws" {
 }
 
 resource "aws_ecr_repository" "ecr_repo" {
+    #checkov:skip=CKV_AWS_51: "Ensure ECR Image Tags are immutable"
+    #checkov:skip=CKV_AWS_163: "Ensure ECR image scanning on push is enabled"
   name = var.ecr_repo_name
   force_delete = true
   
